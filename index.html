@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS サービスクイズ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen">
+            <h1>AWS サービスクイズ</h1>
+            <p>AWSのマネージドサービスのアイコンとサービス名に関するクイズです。</p>
+            <p>全10問の4択問題に挑戦しましょう！</p>
+            <div class="difficulty-selector">
+                <h2>難易度を選択してください</h2>
+                <div class="difficulty-buttons">
+                    <button id="easy-button" class="difficulty-button">Easy</button>
+                    <button id="normal-button" class="difficulty-button">Normal</button>
+                    <button id="hard-button" class="difficulty-button">Hard</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="quiz-container" class="hidden">
+            <div id="progress">
+                <span id="question-number">1</span>/10
+            </div>
+            <div id="score-display">
+                スコア: <span id="score">0</span>
+            </div>
+            <div id="timer-container">
+                残り時間: <span id="timer">10.0</span>秒
+            </div>
+            <div id="question-container">
+                <h2 id="question-text"></h2>
+                <div id="image-container" class="hidden">
+                    <img id="question-image" src="" alt="AWS サービスアイコン">
+                </div>
+            </div>
+            <div id="options-container">
+                <div class="option-row">
+                    <button class="option" data-index="0"></button>
+                    <button class="option" data-index="1"></button>
+                </div>
+                <div class="option-row">
+                    <button class="option" data-index="2"></button>
+                    <button class="option" data-index="3"></button>
+                </div>
+            </div>
+            <div id="feedback" class="hidden">
+                <p id="feedback-text"></p>
+                <button id="next-button">次の問題</button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="hidden">
+            <h1>クイズ終了！</h1>
+            <p>あなたのスコア: <span id="final-score">0</span></p>
+            <div id="high-scores">
+                <h2>ハイスコア</h2>
+                <div class="high-score-tabs">
+                    <button class="tab-button active" data-tab="easy">Easy</button>
+                    <button class="tab-button" data-tab="normal">Normal</button>
+                    <button class="tab-button" data-tab="hard">Hard</button>
+                </div>
+                <div class="tab-content active" id="easy-scores">
+                    <ol id="easy-high-scores"></ol>
+                </div>
+                <div class="tab-content" id="normal-scores">
+                    <ol id="normal-high-scores"></ol>
+                </div>
+                <div class="tab-content" id="hard-scores">
+                    <ol id="hard-high-scores"></ol>
+                </div>
+            </div>
+            <button id="restart-button">もう一度挑戦</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
