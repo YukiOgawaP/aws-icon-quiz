@@ -24,4 +24,4 @@ AWSのマネージドサービスのアイコン名を４択から答えるク�
 
 # アイコン画像
 * アイコン画像は以下のパスに格納されているものを使用してください
-    * /Users/peter5yuki/appDev/q_game
+    * /Users/{username}/appDev/q_game
